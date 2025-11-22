@@ -2,8 +2,7 @@
 apt update -qq
 apt -y install -qq aria2
 pip install huggingface_hub
-export HF_HOME="/kaggle/working"
-export HF_HOME="/kaggle/working"
+export HF_HOME="/teamspace/studios/this_studio"
 
 cd /kaggle/working
 git clone https://github.com/HeyyyAbhishek/Dump.git .
@@ -27,10 +26,11 @@ git checkout main
 
 git pull
 
-cd /kaggle/working
+cd /teamspace/studios/this_studio
+python -m pip install --upgrade pip
 pip install -r requirements_trainer.txt
 
-cd /kaggle/working/SECourses_Musubi_Trainer/musubi-tuner
+cd /teamspace/studios/this_studio/SECourses_Musubi_Trainer/musubi-tuner
 
 pip install -e .
 
