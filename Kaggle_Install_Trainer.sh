@@ -7,7 +7,7 @@
 %export HF_HOME="/kaggle/working"
 
 %cd /kaggle/working
-!git clone https://github.com/HeyyyAbhishek/Dump.git
+!git clone https://github.com/HeyyyAbhishek/Dump.git .
 !git clone --depth 1 https://github.com/FurkanGozukara/SECourses_Musubi_Trainer
 
 %cd SECourses_Musubi_Trainer
