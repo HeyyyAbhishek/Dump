@@ -29,9 +29,9 @@ Upload everything into workspace folder - you can upload zip file and extract it
 To install run below command
 
 pip install huggingface_hub
-export HF_HOME="/workspace"
-chmod +x RunPod_Install_Trainer.sh
-./RunPod_Install_Trainer.sh
+export HF_HOME="/kaggle/working"
+chmod +x Kaggle_Install_Trainer.sh
+./Kaggle_Install_Trainer.sh
 
 
 To automatically download training models into /workspace folder open a new terminal in the folder and execute below commands
@@ -46,11 +46,10 @@ This above command will ask you which model to download choose from menu
 
 To run the app again after installation later run below command - installation will auto start the app so use this later for re-starting the app
 
-cd /workspace/SECourses_Musubi_Trainer
-git pull
-source venv/bin/activate
-unset LD_LIBRARY_PATH
-python gui.py --share
+%cd /kaggle/working/SECourses_Musubi_Trainer
+!git pull
+!unset LD_LIBRARY_PATH
+!python gui.py --share
 
 
 
