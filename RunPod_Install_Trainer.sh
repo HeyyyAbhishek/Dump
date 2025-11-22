@@ -1,44 +1,41 @@
 
-cd /workspace
+# install util
+!apt update -qq
+!apt -y install -qq aria2
 
-git clone --depth 1 https://github.com/FurkanGozukara/SECourses_Musubi_Trainer
+%cd /kaggle/working
+!git clone https://github.com/HeyyyAbhishek/Dump.git
+!git clone --depth 1 https://github.com/FurkanGozukara/SECourses_Musubi_Trainer
 
-cd SECourses_Musubi_Trainer
+%cd SECourses_Musubi_Trainer
 
-git reset --hard
+!git reset --hard
 
-git pull
+!git pull
 
-git clone --depth 1 https://github.com/kohya-ss/musubi-tuner
+!git clone https://github.com/kohya-ss/musubi-tuner
 
-cd musubi-tuner
+%cd musubi-tuner
 
-git reset --hard
+!git reset --hard
 
-git pull
+!git pull
 
-cd ..
+!git checkout main
 
-python -m venv venv
+!git pull
 
-source venv/bin/activate
+%cd /kaggle/working
+!pip install -r requirements_trainer.txt
 
-python -m pip install --upgrade pip
+%cd /kaggle/working/SECourses_Musubi_Trainer/musubi-tuner
 
-cd ..
+!pip install -e .
 
-pip install -r requirements_trainer.txt
+!echo installation completed check for errors
 
-cd SECourses_Musubi_Trainer
+!unset LD_LIBRARY_PATH
 
-cd musubi-tuner
+%cd ..
 
-pip install -e .
-
-echo installation completed check for errors
-
-unset LD_LIBRARY_PATH
-
-cd ..
-
-python gui.py --share
+!python gui.py --share
