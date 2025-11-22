@@ -29,7 +29,7 @@ Upload everything into workspace folder - you can upload zip file and extract it
 To install run below command
 
 pip install huggingface_hub
-export HF_HOME="/kaggle/working"
+export HF_HOME="/teamspace/studios/this_studio"
 chmod +x Kaggle_Install_Trainer.sh
 ./Kaggle_Install_Trainer.sh
 
@@ -46,7 +46,7 @@ This above command will ask you which model to download choose from menu
 
 To run the app again after installation later run below command - installation will auto start the app so use this later for re-starting the app
 
-%cd /kaggle/working/SECourses_Musubi_Trainer
+%cd /teamspace/studios/this_studio
 !git pull
 !unset LD_LIBRARY_PATH
 !python gui.py --share
