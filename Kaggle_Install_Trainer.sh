@@ -2,6 +2,9 @@
 # install util
 !apt update -qq
 !apt -y install -qq aria2
+!pip install huggingface_hub
+!export HF_HOME="/kaggle/working"
+%export HF_HOME="/kaggle/working"
 
 %cd /kaggle/working
 !git clone https://github.com/HeyyyAbhishek/Dump.git
@@ -39,3 +42,4 @@
 %cd ..
 
 !python gui.py --share
+
