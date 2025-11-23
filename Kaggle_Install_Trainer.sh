@@ -1,3 +1,5 @@
+mv /teamspace/studios/this_studio/Dump/* /teamspace/studios/this_studio/
+
 # install util
 apt update -qq
 apt -y install -qq aria2
