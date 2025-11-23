@@ -4,8 +4,8 @@ apt -y install -qq aria2
 pip install huggingface_hub
 export HF_HOME="/teamspace/studios/this_studio"
 
-cd /kaggle/working
-git clone https://github.com/HeyyyAbhishek/Dump.git .
+cd /teamspace/studios/this_studio
+
 git clone --depth 1 https://github.com/FurkanGozukara/SECourses_Musubi_Trainer
 
 cd SECourses_Musubi_Trainer
